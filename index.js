@@ -11,15 +11,15 @@ function checkItem (){
 function deleteItem(){
 
     $('.shopping-list').on('click','.shopping-item-delete',function(event){
-        let itemParent = $(event.currentTarget).closest('li')
-        $(itemParent).remove()
+      let itemParent = $(event.currentTarget).closest('li')
+              $(itemParent).remove()
     })
 
 }
 
 function newItem(){
 
-    $("button, input[type='submit']").on('click',function(event){
+    $('.addItemButton').on('click',function(event){
         event.preventDefault();
         
         const userItem = $('#shopping-list-entry').val();
